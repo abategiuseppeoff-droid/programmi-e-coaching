@@ -4,181 +4,162 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pure Hypertrophy</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Anton&display=swap" rel="stylesheet">
-
 <style>
-/* BASE */
 body {
     font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
     background-color: #000;
     color: #fff;
+    position: relative;
 }
 
-/* LOGHI LATERALI */
+/* Loghi laterali decorativi */
 .side-logo {
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
-    width: 220px;
+    width: 200px;
     height: auto;
-    z-index: 0;
+    opacity: 1;
     pointer-events: none;
+    z-index: 0;
 }
 
-.side-logo.left { left: 40px; }
-.side-logo.right { right: 40px; }
+.side-logo.left { left: 20px; }
+.side-logo.right { right: 20px; }
 
-/* CONTENITORE */
+/* Contenitore principale */
 .container {
     position: relative;
     z-index: 1;
     max-width: 700px;
-    margin: 15px auto;
+    margin: 10px auto;
     padding: 30px;
-    background-color: #222;
-    border-radius: 14px;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.6);
+    background: #222;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
     text-align: center;
 }
 
-/* TITOLI */
+/* Header titolo */
 h1 {
     font-family: 'Anton', sans-serif;
-    font-size: 2.3em;
+    font-size: 2.4em;
     color: #ff0000;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
+/* Titoli secondari */
 h2 {
     color: #ff0000;
-    margin-top: 30px;
+    margin-top: 25px;
     margin-bottom: 10px;
 }
-
-/* BADGE DURATA */
-.duration-badge {
-    display: inline-block;
-    background-color: #ff0000;
-    color: #fff;
-    font-weight: bold;
-    padding: 8px 18px;
-    border-radius: 999px;
-    font-size: 15px;
-    margin: 10px 0 15px 0;
-    box-shadow: 0 3px 10px rgba(255,0,0,0.6);
-}
-
-/* TESTO */
 p {
     margin: 15px 0;
-    line-height: 1.6;
 }
 
+/* Liste centrata su desktop */
 ul {
-    margin-left: 20px;
-    margin-bottom: 20px;
+    margin: 0 auto 20px;
+    padding-left: 20px;
+    max-width: 520px;
     text-align: left;
 }
-
 li strong {
     color: #ff0000;
 }
 
-/* PAYPAL */
+/* Bottone PayPal */
 .button-container {
-    margin: 30px 0 20px;
+    text-align: center;
+    margin: 35px 0 20px 0;
 }
-
 .paypal-button {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
     background-color: #ffc439;
     color: #111;
-    padding: 15px 24px;
+    border: none;
+    padding: 15px 25px;
     font-size: 18px;
-    font-weight: bold;
-    border-radius: 10px;
+    border-radius: 8px;
+    cursor: pointer;
     text-decoration: none;
-    transition: transform 0.2s, background 0.3s;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
 }
-
 .paypal-button img {
     height: 24px;
+    margin-right: 10px;
 }
-
 .paypal-button:hover {
     background-color: #ffb347;
-    transform: scale(1.04);
+    transform: scale(1.03);
 }
 
 /* FAQ */
 .faq {
-    margin-top: 25px;
+    margin-top: 20px;
     padding-top: 20px;
     border-top: 1px solid #444;
 }
-
 .faq h3 {
     color: #ff0000;
     margin-bottom: 10px;
 }
-
 .faq p {
+    margin-bottom: 10px;
     color: #ddd;
 }
 
-/* NOTE */
+/* Nota aggiuntiva sotto le FAQ */
 .note {
     font-size: 14px;
     color: #aaa;
+    text-align: center;
     margin-top: 20px;
 }
-
+.note strong,
 .note a {
     color: #fff;
-    font-weight: bold;
     text-decoration: none;
+    font-weight: bold;
 }
-
 .note a:hover {
     text-decoration: underline;
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
-    .side-logo { display: none; }
-}
-
+/* Mobile */
 @media (max-width: 480px) {
     .container {
         padding: 20px;
         margin: 10px;
     }
-
-    h1 { font-size: 2em; }
-
     .paypal-button {
         width: 100%;
-        box-sizing: border-box;
-        font-size: 16px;
-        padding: 14px;
+        justify-content: center;
+    }
+    .side-logo {
+        width: 120px;
+    }
+    ul {
+        max-width: 100%;
+        padding-left: 20px;
     }
 }
 </style>
 </head>
-
 <body>
 
+<!-- Loghi laterali decorativi -->
 <img src="Logo.png" alt="Logo sinistro" class="side-logo left">
 <img src="Logo.png" alt="Logo destro" class="side-logo right">
 
 <div class="container">
-
     <h1>Pure Hypertrophy</h1>
 
     <p>
@@ -186,50 +167,43 @@ li strong {
         <strong>aumentare massa muscolare</strong> in modo graduale e sostenibile.
     </p>
 
-    <h2>Caratteristiche</h2>
-
-    <div class="duration-badge">
-        🔥 12 settimane di programmazione
-    </div>
-
+    <h2>Caratteristiche:</h2>
     <ul>
         <li><strong>4 sessioni di allenamento a settimana</strong></li>
         <li><strong>Suddivisione muscolare orientata all’ipertrofia</strong></li>
         <li><strong>Progressioni settimanali</strong> su volumi e carichi</li>
         <li><strong>Esercizi pratici ed efficaci</strong> per palestre standard</li>
-        <li><strong>Metodo testato</strong> con atleti seguiti direttamente</li>
+        <li><strong>Metodo testato</strong> con atleti e clienti seguiti direttamente</li>
+        <li><strong>12 settimane di programmazione</strong></li>
     </ul>
 
-    <h2>Destinatari</h2>
+    <h2>Destinatari:</h2>
     <ul>
         <li>Persone con esperienza in sala pesi</li>
-        <li>Palestre con <strong>bilancieri</strong> e <strong>manubri</strong></li>
-        <li><strong>Non indicato</strong> per <strong>principianti</strong></li>
+        <li>Palestre con <strong>bilancieri</strong>, <strong>manubri</strong> e macchine standard</li>
+        <li><strong>Non indicato</strong> per <strong>principianti</strong> assoluti</li>
     </ul>
 
     <div class="button-container">
         <a href="https://paypal.me/giuseppeabatept/30" target="_blank" class="paypal-button">
-            <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal">
-            Acquista ora – 30€
+            <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal Logo">
+            Acquista Ora – 30€
         </a>
     </div>
 
     <div class="faq">
-        <h3>FAQ – Domande frequenti</h3>
-        <p><strong>È adatto ai principianti?</strong> No, è richiesta esperienza.</p>
-        <p><strong>Che attrezzatura serve?</strong> Bilancieri, manubri e macchine standard.</p>
+        <h3>FAQ – Domande Frequenti</h3>
+        <p><strong>È adatto ai principianti?</strong> No, serve una base di allenamento in palestra.</p>
+        <p><strong>Che attrezzatura serve?</strong> Solo bilancieri, manubri e macchine standard.</p>
         <p><strong>Quando ricevo il PDF?</strong> Entro 24 ore dal pagamento.</p>
     </div>
 
     <p class="note">
-        <strong>N.B.</strong> Inserisci email o numero di telefono nelle note PayPal e seleziona
-        <strong>“Amici e parenti”</strong>.<br><br>
-        Per altri metodi di pagamento contattami su
-        <a href="https://www.instagram.com/giuseppe_abate_000" target="_blank">Instagram</a> o
-        <a href="https://wa.me/3517781710" target="_blank">WhatsApp</a>.
+        <strong>N.B.</strong> È necessario aggiungere l'indirizzo email o il numero di telefono in cui si vuole ricevere la programmazione direttamente nelle note del pagamento. Ricordati di scegliere "Amici e parenti".<br><br>
+        Per altri metodi di pagamento contattami su 
+        <a href="https://www.instagram.com/giuseppe_abate_000?igsh=MWJkc2t5NzJwaXdscw==" target="_blank">Instagram</a> o 
+        <a href="https://wa.me/3517781710" target="_blank">WhatsApp</a>!
     </p>
-
 </div>
-
 </body>
 </html>
