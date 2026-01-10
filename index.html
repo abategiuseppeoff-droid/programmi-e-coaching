@@ -6,14 +6,16 @@
 <title>Catalogo Programmi</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Anton&display=swap" rel="stylesheet">
 <style>
-/* Corpo principale */
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #000;
     color: #fff;
     margin: 0;
     padding: 0;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
 }
 
 /* Loghi laterali decorativi */
@@ -21,9 +23,8 @@ body {
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
-    width: 200px; /* grandi e leggibili */
+    width: 200px;
     height: auto;
-    opacity: 1;
     pointer-events: none;
     z-index: 0;
 }
@@ -34,41 +35,24 @@ body {
     right: 20px;
 }
 
-/* Contenitore principale */
-.container {
-    position: relative;
-    z-index: 1;
-    max-width: 700px;
-    margin: 10px auto;
-    padding: 30px;
-    background: #222;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-    text-align: center;
-}
-
-/* Logo sopra il titolo */
+/* Logo principale */
 .logo {
     max-width: 300px;
+    width: 80%;
     height: auto;
-    display: block;
-    margin: 0 auto 15px auto;
-}
-
-/* Titolo principale */
-h1 {
-    font-family: 'Anton', sans-serif;
-    font-size: 2.4em;
-    color: #ff0000;
-    margin-bottom: 25px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 /* Griglia programmi */
 .program-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
-    justify-items: center;
+    width: 100%;
+    max-width: 700px;
+    padding: 0 10px;
 }
 
 /* Card programmi */
@@ -142,15 +126,13 @@ h1 {
 
 /* Mobile */
 @media (max-width: 480px) {
-    h1 {
-        font-size: 2.2em;
-    }
-    .container {
-        padding: 15px;
-        margin: 10px auto;
-    }
     .logo {
         max-width: 200px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .program-card {
+        max-width: 90%;
     }
     .side-logo {
         width: 120px;
@@ -164,27 +146,25 @@ h1 {
 <img src="Logo.png" alt="Logo sinistro" class="side-logo left">
 <img src="Logo.png" alt="Logo destro" class="side-logo right">
 
-<div class="container">
-    <!-- Logo sopra il titolo -->
-    <img src="Logo.png" alt="Logo" class="logo">
+<!-- Logo principale -->
+<img src="Logo.png" alt="Logo" class="logo">
 
-    <h1><span class="title-bg">Programmi disponibili</span></h1>
+<!-- Griglia programmi -->
+<div class="program-grid">
+    <!-- Programma Pure Hypertrophy -->
+    <div class="program-card">
+        <h2>Pure Hypertrophy</h2>
+        <p>Programma strutturato per chi vuole aumentare massa muscolare in modo graduale e sostenibile.</p>
+        <a href="pure-hypertrophy.html">Acquista / Scopri</a>
+    </div>
 
-    <div class="program-grid">
-        <!-- Programma Pure Hypertrophy -->
-        <div class="program-card">
-            <h2>Pure Hypertrophy</h2>
-            <p>Programma strutturato per chi vuole aumentare massa muscolare in modo graduale e sostenibile.</p>
-            <a href="pure-hypertrophy.html">Acquista / Scopri</a>
-        </div>
-
-        <!-- Seconda card: programmi futuri -->
-        <div class="program-card disabled-card">
-            <h2>Nuovi programmi presto in arrivo!</h2>
-            <p></p>
-            <a href="#" class="disabled">Acquista / Scopri</a>
-        </div>
+    <!-- Seconda card: programmi futuri -->
+    <div class="program-card disabled-card">
+        <h2>Nuovi programmi presto in arrivo!</h2>
+        <p></p>
+        <a href="#" class="disabled">Acquista / Scopri</a>
     </div>
 </div>
+
 </body>
 </html>
