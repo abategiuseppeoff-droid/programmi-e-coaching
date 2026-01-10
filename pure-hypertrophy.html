@@ -57,32 +57,28 @@ h2 {
     margin-top: 25px;
     margin-bottom: 10px;
 }
-p {
-    margin: 15px 0;
-    text-align: center;
-}
-ul {
-    margin-left: 0;
-    padding-left: 0;
-    margin-bottom: 20px;
-    list-style-position: inside;
-}
-ul li {
-    text-align: center;
-    margin-bottom: 10px;
-}
+p { margin: 15px 0; text-align: center; }
+ul { margin-left: 0; padding-left: 0; margin-bottom: 20px; list-style-position: inside; }
+ul li { text-align: center; margin-bottom: 10px; }
 li strong { color: #ff0000; }
 
-/* Riquadro 12 settimane */
+/* Riquadro speciale 12 settimane */
 .weeks-box {
-    background-color: #333;
-    color: #ff0000;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff0000; /* sfondo rosso fuoco */
+    color: #fff;
     padding: 10px 20px;
-    border-radius: 10px;
+    border-radius: 12px;
     margin: 15px auto;
-    display: inline-block;
     font-weight: bold;
     font-size: 1.1em;
+}
+.weeks-box img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
 }
 
 /* Bottone PayPal */
@@ -107,14 +103,8 @@ li strong { color: #ff0000; }
     max-width: 100%;
     box-sizing: border-box;
 }
-.paypal-button img {
-    height: 24px;
-    margin-right: 10px;
-}
-.paypal-button:hover {
-    background-color: #ffb347;
-    transform: scale(1.03);
-}
+.paypal-button img { height: 24px; margin-right: 10px; }
+.paypal-button:hover { background-color: #ffb347; transform: scale(1.03); }
 
 /* FAQ */
 .faq {
@@ -133,25 +123,15 @@ li strong { color: #ff0000; }
     margin-top: 20px;
 }
 .note strong,
-.note a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-.note a:hover {
-    text-decoration: underline;
-}
+.note a { color: #fff; text-decoration: none; font-weight: bold; }
+.note a:hover { text-decoration: underline; }
 
 /* Mobile */
 @media (max-width: 480px) {
     .container { padding: 20px; margin: 10px; }
-    .paypal-button {
-        width: 100%;
-        justify-content: center;
-        padding: 12px 15px;
-        font-size: 16px;
-    }
+    .paypal-button { width: 100%; justify-content: center; padding: 12px 15px; font-size: 16px; }
     .side-logo { width: 120px; }
+    .weeks-box img { width: 20px; height: 20px; margin-right: 6px; }
 }
 </style>
 </head>
@@ -170,7 +150,11 @@ li strong { color: #ff0000; }
     </p>
 
     <h2>Caratteristiche:</h2>
-    <div class="weeks-box">12 settimane di programmazione</div>
+    <!-- Riquadro 12 settimane con fuoco -->
+    <div class="weeks-box">
+        <img src="fire-icon.png" alt="Fuoco">
+        12 settimane di programmazione
+    </div>
     <ul>
         <li><strong>4 sessioni di allenamento a settimana</strong></li>
         <li><strong>Suddivisione muscolare orientata all’ipertrofia</strong></li>
