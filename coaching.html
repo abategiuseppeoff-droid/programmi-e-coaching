@@ -18,11 +18,11 @@ body {
 
 /* Contenitore principale */
 .container {
-    max-width: 720px;
-    margin: 20px auto;
+    max-width: 700px;
+    margin: 15px auto;
     padding: 30px;
     background: #222;
-    border-radius: 14px;
+    border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.6);
     text-align: center;
 }
@@ -30,77 +30,79 @@ body {
 /* Titolo */
 h1 {
     font-family: 'Anton', sans-serif;
-    font-size: 2.6em;
+    font-size: 2.4em;
     color: #ff0000;
     margin-bottom: 15px;
 }
 
-/* Sottotitolo */
-.subtitle {
-    font-size: 1.1em;
-    margin-bottom: 30px;
+/* Testo intro */
+.intro {
+    margin-bottom: 25px;
+    font-size: 1.05em;
 }
 
-/* Sezioni */
-.section {
-    margin-top: 30px;
-}
-.section h2 {
+/* Titoli sezione */
+h2 {
     color: #ff0000;
-    margin-bottom: 10px;
+    margin: 25px 0 10px;
 }
 
-/* Lista */
+/* Liste */
 ul {
     list-style: none;
     padding: 0;
+    margin-bottom: 20px;
 }
 ul li {
-    margin: 10px 0;
+    margin: 8px 0;
 }
 ul li strong {
     color: #ff0000;
 }
 
-/* Pulsante */
+/* Bottoni */
 .button-container {
-    margin-top: 35px;
-    position: relative;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
-.button-disabled {
-    background: #555;
-    color: #ccc;
-    padding: 15px 30px;
-    border-radius: 10px;
-    font-weight: bold;
-    cursor: not-allowed;
+.button {
     display: inline-block;
+    padding: 14px 22px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-/* Tooltip */
-.button-container:hover::after {
-    content: "Presto disponibile!";
-    position: absolute;
-    bottom: -35px;
-    left: 50%;
-    transform: translateX(-50%);
+.button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(255,0,0,0.6);
+}
+
+/* Instagram */
+.btn-instagram {
     background: #ff0000;
     color: #fff;
-    padding: 6px 12px;
-    border-radius: 6px;
-    font-size: 13px;
-    white-space: nowrap;
+}
+
+/* WhatsApp */
+.btn-whatsapp {
+    background: #25d366;
+    color: #111;
 }
 
 /* Mobile */
 @media (max-width: 480px) {
-    h1 {
-        font-size: 2.2em;
-    }
     .container {
         margin: 10px;
         padding: 20px;
+    }
+    h1 {
+        font-size: 2.1em;
     }
 }
 </style>
@@ -109,34 +111,38 @@ ul li strong {
 <body>
 
 <div class="container">
+
     <h1>Coaching Online</h1>
 
-    <p class="subtitle">
+    <p class="intro">
         Percorso personalizzato costruito sui tuoi <strong>obiettivi reali</strong>.
     </p>
 
-    <div class="section">
-        <h2>Cosa include</h2>
-        <ul>
-            <li><strong>Programmazione personalizzata</strong></li>
-            <li>Adattamento continuo in base ai progressi</li>
-            <li>Supporto diretto e feedback costante</li>
-            <li>Approccio pratico e sostenibile</li>
-        </ul>
-    </div>
+    <h2>Cosa include</h2>
+    <ul>
+        <li><strong>Programmazione personalizzata</strong></li>
+        <li>Adattamenti settimanali</li>
+        <li>Feedback e supporto diretto</li>
+        <li>Approccio pratico e sostenibile</li>
+    </ul>
 
-    <div class="section">
-        <h2>Per chi è pensato</h2>
-        <ul>
-            <li>Persone con esperienza in palestra</li>
-            <li>Chi vuole risultati concreti e misurabili</li>
-            <li>Chi è disposto a seguire un percorso strutturato</li>
-        </ul>
-    </div>
+    <h2>Per chi è pensato</h2>
+    <ul>
+        <li>Persone con esperienza in palestra</li>
+        <li>Chi vuole risultati concreti</li>
+        <li>Chi segue un percorso con costanza</li>
+    </ul>
 
     <div class="button-container">
-        <div class="button-disabled">Attiva Coaching</div>
+        <a href="https://www.instagram.com/giuseppe_abate_000" target="_blank" class="button btn-instagram">
+            Contattami su Instagram
+        </a>
+
+        <a href="https://wa.me/3517781710" target="_blank" class="button btn-whatsapp">
+            Scrivimi su WhatsApp
+        </a>
     </div>
+
 </div>
 
 </body>
