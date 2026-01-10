@@ -18,23 +18,17 @@ body {
 
 /* Loghi laterali decorativi */
 .side-logo {
-    position: fixed; /* fissati sullo sfondo */
+    position: fixed;
     top: 50%;
     transform: translateY(-50%);
-    width: 200px; /* grandi e leggibili */
+    width: 250px;
     height: auto;
     opacity: 1;
-    pointer-events: none; /* non interferiscono con il click */
+    pointer-events: none;
     z-index: 0;
 }
-
-.side-logo.left {
-    left: 20px; /* vicino al bordo sinistro della pagina */
-}
-
-.side-logo.right {
-    right: 20px; /* vicino al bordo destro della pagina */
-}
+.side-logo.left { left: 20px; }
+.side-logo.right { right: 20px; }
 
 /* Contenitore principale */
 .container {
@@ -49,7 +43,7 @@ body {
     text-align: center;
 }
 
-/* Header titolo */
+/* Titolo */
 h1 {
     font-family: 'Anton', sans-serif;
     font-size: 2.4em;
@@ -58,21 +52,10 @@ h1 {
 }
 
 /* Titoli secondari */
-h2 {
-    color: #ff0000;
-    margin-top: 25px;
-    margin-bottom: 10px;
-}
-p {
-    margin: 15px 0;
-}
-ul {
-    margin-left: 20px;
-    margin-bottom: 20px;
-}
-li strong {
-    color: #ff0000;
-}
+h2 { color: #ff0000; margin-top: 25px; margin-bottom: 10px; }
+p { margin: 15px 0; }
+ul { margin-left: 20px; margin-bottom: 20px; }
+li strong { color: #ff0000; }
 
 /* Bottone PayPal */
 .button-container {
@@ -88,81 +71,38 @@ li strong {
     padding: 15px 25px;
     font-size: 18px;
     border-radius: 8px;
-    cursor: pointer;
-    text-decoration: none;
     font-weight: bold;
+    text-decoration: none;
     transition: background 0.3s, transform 0.2s;
 }
-.paypal-button img {
-    height: 24px;
-    margin-right: 10px;
-}
-.paypal-button:hover {
-    background-color: #ffb347;
-    transform: scale(1.03);
-}
+.paypal-button img { height: 24px; margin-right: 10px; }
+.paypal-button:hover { background-color: #ffb347; transform: scale(1.03); }
 
 /* FAQ */
-.faq {
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid #444;
-}
-.faq h3 {
-    color: #ff0000;
-    margin-bottom: 10px;
-}
-.faq p {
-    margin-bottom: 10px;
-    color: #ddd;
-}
+.faq { margin-top: 20px; padding-top: 20px; border-top: 1px solid #444; }
+.faq h3 { color: #ff0000; margin-bottom: 10px; }
+.faq p { margin-bottom: 10px; color: #ddd; }
 
-/* Nota aggiuntiva sotto le FAQ */
-.note {
-    font-size: 14px;
-    color: #aaa;
-    text-align: center;
-    margin-top: 20px;
-}
-.note strong,
-.note a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-.note a:hover {
-    text-decoration: underline;
-}
+/* Nota sotto FAQ */
+.note { font-size: 14px; color: #aaa; text-align: center; margin-top: 20px; }
+.note strong, .note a { color: #fff; text-decoration: none; font-weight: bold; }
+.note a:hover { text-decoration: underline; }
 
-/* Mobile */
 @media (max-width: 480px) {
-    .container {
-        padding: 20px;
-        margin: 10px;
-    }
-    .paypal-button {
-        width: 100%;
-        justify-content: center;
-    }
-    .side-logo {
-        width: 120px; /* più piccoli su mobile */
-    }
+    .container { padding: 20px; margin: 10px; }
+    .side-logo { width: 120px; }
+    .paypal-button { width: 100%; justify-content: center; }
 }
 </style>
 </head>
 <body>
-
-<!-- Loghi laterali decorativi -->
 <img src="Logo.png" alt="Logo sinistro" class="side-logo left">
 <img src="Logo.png" alt="Logo destro" class="side-logo right">
 
 <div class="container">
     <h1>Pure Hypertrophy</h1>
 
-    <p>
-        Programma strutturato per chi si allena già in palestra e vuole
-        <strong>aumentare massa muscolare</strong> in modo graduale e sostenibile.
-    </p>
+    <p>Programma strutturato per chi si allena già in palestra e vuole <strong>aumentare massa muscolare</strong> in modo graduale e sostenibile.</p>
 
     <h2>Caratteristiche:</h2>
     <ul>
@@ -203,6 +143,3 @@ li strong {
 </div>
 </body>
 </html>
-
-
-
