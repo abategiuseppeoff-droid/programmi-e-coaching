@@ -27,7 +27,6 @@ body {
     pointer-events: none;
     z-index: 0;
 }
-
 .side-logo.left { left: 20px; }
 .side-logo.right { right: 20px; }
 
@@ -60,17 +59,30 @@ h2 {
 }
 p {
     margin: 15px 0;
+    text-align: center;
 }
-
-/* Liste centrata su desktop */
 ul {
-    margin: 0 auto 20px;
-    padding-left: 20px;
-    max-width: 520px;
-    text-align: left;
+    margin-left: 0;
+    padding-left: 0;
+    margin-bottom: 20px;
+    list-style-position: inside;
 }
-li strong {
+ul li {
+    text-align: center;
+    margin-bottom: 10px;
+}
+li strong { color: #ff0000; }
+
+/* Riquadro 12 settimane */
+.weeks-box {
+    background-color: #333;
     color: #ff0000;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 15px auto;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.1em;
 }
 
 /* Bottone PayPal */
@@ -81,6 +93,7 @@ li strong {
 .paypal-button {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     background-color: #ffc439;
     color: #111;
     border: none;
@@ -91,6 +104,8 @@ li strong {
     text-decoration: none;
     font-weight: bold;
     transition: background 0.3s, transform 0.2s;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 .paypal-button img {
     height: 24px;
@@ -107,14 +122,8 @@ li strong {
     padding-top: 20px;
     border-top: 1px solid #444;
 }
-.faq h3 {
-    color: #ff0000;
-    margin-bottom: 10px;
-}
-.faq p {
-    margin-bottom: 10px;
-    color: #ddd;
-}
+.faq h3 { color: #ff0000; margin-bottom: 10px; }
+.faq p { margin-bottom: 10px; color: #ddd; }
 
 /* Nota aggiuntiva sotto le FAQ */
 .note {
@@ -135,21 +144,14 @@ li strong {
 
 /* Mobile */
 @media (max-width: 480px) {
-    .container {
-        padding: 20px;
-        margin: 10px;
-    }
+    .container { padding: 20px; margin: 10px; }
     .paypal-button {
         width: 100%;
         justify-content: center;
+        padding: 12px 15px;
+        font-size: 16px;
     }
-    .side-logo {
-        width: 120px;
-    }
-    ul {
-        max-width: 100%;
-        padding-left: 20px;
-    }
+    .side-logo { width: 120px; }
 }
 </style>
 </head>
@@ -168,18 +170,18 @@ li strong {
     </p>
 
     <h2>Caratteristiche:</h2>
+    <div class="weeks-box">12 settimane di programmazione</div>
     <ul>
         <li><strong>4 sessioni di allenamento a settimana</strong></li>
         <li><strong>Suddivisione muscolare orientata all’ipertrofia</strong></li>
         <li><strong>Progressioni settimanali</strong> su volumi e carichi</li>
         <li><strong>Esercizi pratici ed efficaci</strong> per palestre standard</li>
         <li><strong>Metodo testato</strong> con atleti e clienti seguiti direttamente</li>
-        <li><strong>12 settimane di programmazione</strong></li>
     </ul>
 
     <h2>Destinatari:</h2>
     <ul>
-        <li>Persone con esperienza in sala pesi</li>
+        <li><strong>Persone con esperienza</strong> in sala pesi</li>
         <li>Palestre con <strong>bilancieri</strong>, <strong>manubri</strong> e macchine standard</li>
         <li><strong>Non indicato</strong> per <strong>principianti</strong> assoluti</li>
     </ul>
