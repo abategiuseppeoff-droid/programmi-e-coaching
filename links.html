@@ -36,24 +36,29 @@ a.button {
     border-radius: 8px;
     font-size: 18px;
     transition: background 0.3s, transform 0.2s;
-    position: relative;
 }
 a.button:hover {
     background: #ffb347;
     transform: scale(1.03);
 }
 
-/* Pulsante disabilitato */
-a.button.disabled {
+/* Wrapper per pulsante disabilitato con tooltip */
+.button-wrapper {
+    position: relative;
+    display: block;
+    width: 90%;
+    max-width: 320px;
+    margin: 15px auto;
+}
+.button-wrapper .button.disabled {
     background: #555;
     color: #ccc;
     cursor: default;
-    transform: none;
-    pointer-events: auto; /* serve per tooltip */
+    pointer-events: none; /* blocca il click */
 }
 
 /* Tooltip */
-a.button.disabled::after {
+.button-wrapper .button.disabled::after {
     content: attr(data-tooltip);
     position: absolute;
     bottom: 120%;
@@ -69,7 +74,7 @@ a.button.disabled::after {
     pointer-events: none;
     transition: opacity 0.3s;
 }
-a.button.disabled:hover::after {
+.button-wrapper:hover .button.disabled::after {
     opacity: 1;
 }
 
@@ -95,9 +100,11 @@ a.button.disabled:hover::after {
 
 <!-- Pulsanti interni -->
 <a class="button" href="index.html" target="_blank">Protocolli Basic</a>
-<a class="button disabled" data-tooltip="Coaching online presto disponibile!" onclick="return false;">Coaching</a>
 
-<!-- In futuro puoi aggiungere altri programmi qui -->
+<!-- Pulsante Coaching disabilitato con tooltip -->
+<div class="button-wrapper">
+    <a class="button disabled" data-tooltip="Coaching online presto disponibile!">Coaching</a>
+</div>
 
 </body>
 </html>
