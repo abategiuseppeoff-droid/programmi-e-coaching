@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Catalogo Programmi</title>
+<title>Programmi & Coaching</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Anton&display=swap" rel="stylesheet">
 
 <style>
@@ -13,121 +14,97 @@ body {
     color: #fff;
     margin: 0;
     padding: 0;
-    position: relative;
 }
 
-/* Loghi laterali */
-.side-logo {
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 260px;
-    height: auto;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.side-logo.left {
-    left: calc(50% - 360px);
-}
-
-.side-logo.right {
-    right: calc(50% - 360px);
-}
-
-/* Contenitore */
+/* CONTENITORE */
 .container {
-    position: relative;
-    z-index: 1;
-    max-width: 700px;
-    margin: 15px auto;
-    padding: 25px;
-    background: #000; /* ora nero */
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 15px;
     text-align: center;
 }
 
-/* Logo principale */
+/* LOGO */
 .logo {
-    max-width: 340px; /* più grande */
+    max-width: 390px;
     height: auto;
-    margin-bottom: 8px;
+    margin: 10px auto 5px auto;
+    display: block;
 }
 
-/* Titolo */
+/* TITOLO */
 h1 {
     font-family: 'Anton', sans-serif;
-    font-size: 2.6em;
-    color: #ff0000;
-    margin-bottom: 12px;
+    font-size: 2.1em;
+    margin: 10px 0 35px 0;
 }
 
-/* Rettangolo titolo */
+/* BACKGROUND TITOLO */
 .title-bg {
-    background-color: #000; /* nero uniforme */
-    padding: 8px 22px;
+    background-color: #000;
+    color: #ff0000;
+    padding: 6px 22px;
     border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.7);
     display: inline-block;
 }
 
-/* Rettangolo decorativo sotto il titolo */
-.title-card {
-    background: #222;
-    width: 180px;
-    height: 10px;
-    margin: 12px auto 25px auto;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.6);
-}
-
-/* Griglia programmi */
+/* GRIGLIA PROGRAMMI */
 .program-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
-    justify-items: center;
+    gap: 22px;
+    justify-content: center;
 }
 
-/* Card */
+/* CARD */
 .program-card {
     background: #222;
     border-radius: 15px;
     padding: 22px;
-    max-width: 300px;
-    width: 100%;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.6);
     position: relative;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.25s, box-shadow 0.25s;
 }
 
 .program-card:hover {
-    transform: scale(1.02);
-    box-shadow: 0 6px 20px rgba(255,0,0,0.6);
+    transform: scale(1.03);
+    box-shadow: 0 6px 22px rgba(255,0,0,0.55);
 }
 
 .program-card h2 {
     color: #ff0000;
     margin-bottom: 12px;
+    font-size: 1.55em;
 }
 
 .program-card p {
+    line-height: 1.5;
     margin-bottom: 18px;
 }
 
+/* PULSANTI */
 .program-card a {
     display: inline-block;
     text-decoration: none;
     background-color: #ffc439;
     color: #111;
-    padding: 12px 20px;
+    padding: 11px 22px;
     border-radius: 8px;
     font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
 }
 
 .program-card a:hover:not(.disabled) {
     background-color: #ffb347;
+    transform: scale(1.05);
 }
 
-/* Disabilitato */
+/* CARD DISABILITATA */
+.program-card.disabled {
+    opacity: 0.9;
+}
+
 .program-card a.disabled {
     background-color: #555;
     color: #ccc;
@@ -135,66 +112,69 @@ h1 {
     pointer-events: none;
 }
 
-/* Tooltip */
-.program-card.disabled-card::after {
+/* TOOLTIP */
+.program-card.disabled::after {
     content: "Nuovi programmi presto in arrivo!";
     position: absolute;
-    bottom: 10px;
+    bottom: 12px;
     left: 50%;
     transform: translateX(-50%);
     background-color: #ff0000;
     color: #fff;
-    padding: 6px 10px;
+    padding: 6px 12px;
     border-radius: 6px;
-    opacity: 0;
-    transition: opacity 0.3s;
     font-size: 12px;
     white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
 }
 
-.program-card.disabled-card:hover::after {
+.program-card.disabled:hover::after {
     opacity: 1;
 }
 
-/* Mobile */
+/* MOBILE */
 @media (max-width: 480px) {
     .logo {
-        max-width: 230px;
+        max-width: 300px;
     }
-    .side-logo {
-        width: 120px;
-        left: 5px !important;
-        right: 5px !important;
+    h1 {
+        font-size: 1.8em;
     }
 }
 </style>
 </head>
 
 <body>
-
-<img src="Logo.png" class="side-logo left">
-<img src="Logo.png" class="side-logo right">
-
 <div class="container">
 
+    <!-- LOGO -->
     <img src="Logo.png" alt="Logo" class="logo">
 
+    <!-- TITOLO -->
     <h1><span class="title-bg">Programmi disponibili</span></h1>
 
-    <!-- Rettangolo decorativo -->
-    <div class="title-card"></div>
-
+    <!-- PROGRAMMI -->
     <div class="program-grid">
+
+        <!-- PURE HYPERTROPHY -->
         <div class="program-card">
             <h2>Pure Hypertrophy</h2>
-            <p>Programma strutturato per aumentare massa muscolare in modo graduale e sostenibile.</p>
-            <a href="pure-hypertrophy.html">Acquista / Scopri</a>
+            <p>
+                Programma strutturato per aumentare massa muscolare
+                in modo graduale e sostenibile.
+            </p>
+            <a href="pure-hypertrophy.html">Scopri il programma</a>
         </div>
 
-        <div class="program-card disabled-card">
-            <h2>Nuovi programmi presto in arrivo!</h2>
-            <a class="disabled">Acquista / Scopri</a>
+        <!-- PROGRAMMI FUTURI -->
+        <div class="program-card disabled">
+            <h2>Nuovi programmi</h2>
+            <p>Altri protocolli e percorsi in arrivo.</p>
+            <a class="disabled">Presto disponibile</a>
         </div>
+
     </div>
 
 </div>
