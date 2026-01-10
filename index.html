@@ -6,50 +6,78 @@
 <title>Catalogo Programmi</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Anton&display=swap" rel="stylesheet">
 <style>
+/* Corpo principale */
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #000;
     color: #fff;
     margin: 0;
     padding: 0;
+    position: relative;
+}
+
+/* Loghi laterali decorativi */
+.side-logo {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px; /* grandi e leggibili */
+    height: auto;
+    opacity: 1;
+    pointer-events: none;
+    z-index: 0;
+}
+.side-logo.left {
+    left: 20px;
+}
+.side-logo.right {
+    right: 20px;
+}
+
+/* Contenitore principale */
+.container {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin: 10px auto;
+    padding: 30px;
+    background: #222;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    text-align: center;
 }
 
 /* Logo sopra il titolo */
 .logo {
-    max-width: 400px;
+    max-width: 300px;
     height: auto;
-    margin-bottom: 10px;
+    display: block;
+    margin: 0 auto 15px auto;
 }
 
 /* Titolo principale */
 h1 {
     font-family: 'Anton', sans-serif;
-    font-size: 3em;
-    margin-bottom: 25px;
-}
-
-/* Riquadro titolo */
-.title-bg {
-    background-color: #222;
+    font-size: 2.4em;
     color: #ff0000;
-    padding: 10px 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
-    display: inline-block;
+    margin-bottom: 25px;
 }
 
 /* Griglia programmi */
 .program-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    justify-items: center;
 }
 
 /* Card programmi */
 .program-card {
     background: #222;
     border-radius: 15px;
-    padding: 25px;
+    padding: 20px;
+    width: 100%;
+    max-width: 280px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.5);
     position: relative;
     transition: transform 0.2s, box-shadow 0.2s;
@@ -117,15 +145,29 @@ h1 {
     h1 {
         font-size: 2.2em;
     }
+    .container {
+        padding: 15px;
+        margin: 10px auto;
+    }
     .logo {
-        max-width: 250px;
+        max-width: 200px;
+    }
+    .side-logo {
+        width: 120px;
     }
 }
 </style>
 </head>
 <body>
+
+<!-- Loghi laterali decorativi -->
+<img src="Logo.png" alt="Logo sinistro" class="side-logo left">
+<img src="Logo.png" alt="Logo destro" class="side-logo right">
+
 <div class="container">
+    <!-- Logo sopra il titolo -->
     <img src="Logo.png" alt="Logo" class="logo">
+
     <h1><span class="title-bg">Programmi disponibili</span></h1>
 
     <div class="program-grid">
