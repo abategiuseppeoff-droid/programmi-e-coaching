@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pure Hypertrophy</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Anton&display=swap" rel="stylesheet">
+<style>
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    position: relative;
+}
+
+/* Loghi laterali decorativi */
+.side-logo {
+    position: fixed; /* fissati sullo sfondo */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px; /* grandi e leggibili */
+    height: auto;
+    opacity: 1;
+    pointer-events: none; /* non interferiscono con il click */
+    z-index: 0;
+}
+
+.side-logo.left {
+    left: 20px; /* vicino al bordo sinistro della pagina */
+}
+
+.side-logo.right {
+    right: 20px; /* vicino al bordo destro della pagina */
+}
+
+/* Contenitore principale */
+.container {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin: 10px auto;
+    padding: 30px;
+    background: #222;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+/* Header titolo */
+h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: 2.4em;
+    color: #ff0000;
+    margin-bottom: 25px;
+}
+
+/* Titoli secondari */
+h2 {
+    color: #ff0000;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+p {
+    margin: 15px 0;
+}
+ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+li strong {
+    color: #ff0000;
+}
+
+/* Bottone PayPal */
+.button-container {
+    text-align: center;
+    margin: 35px 0 20px 0;
+}
+.paypal-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #ffc439;
+    color: #111;
+    border: none;
+    padding: 15px 25px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+.paypal-button img {
+    height: 24px;
+    margin-right: 10px;
+}
+.paypal-button:hover {
+    background-color: #ffb347;
+    transform: scale(1.03);
+}
+
+/* FAQ */
+.faq {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+}
+.faq h3 {
+    color: #ff0000;
+    margin-bottom: 10px;
+}
+.faq p {
+    margin-bottom: 10px;
+    color: #ddd;
+}
+
+/* Nota aggiuntiva sotto le FAQ */
+.note {
+    font-size: 14px;
+    color: #aaa;
+    text-align: center;
+    margin-top: 20px;
+}
+.note strong,
+.note a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.note a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+        margin: 10px;
+    }
+    .paypal-button {
+        width: 100%;
+        justify-content: center;
+    }
+    .side-logo {
+        width: 120px; /* più piccoli su mobile */
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Loghi laterali decorativi -->
+<img src="Logo.png" alt="Logo sinistro" class="side-logo left">
+<img src="Logo.png" alt="Logo destro" class="side-logo right">
+
+<div class="container">
+    <h1>Pure Hypertrophy</h1>
+
+    <p>
+        Programma strutturato per chi si allena già in palestra e vuole
+        <strong>aumentare massa muscolare</strong> in modo graduale e sostenibile.
+    </p>
+
+    <h2>Caratteristiche:</h2>
+    <ul>
+        <li><strong>4 sessioni di allenamento a settimana</strong></li>
+        <li><strong>Suddivisione muscolare orientata all’ipertrofia</strong></li>
+        <li><strong>Progressioni settimanali</strong> su volumi e carichi</li>
+        <li><strong>Esercizi pratici ed efficaci</strong> per palestre standard</li>
+        <li><strong>Metodo testato</strong> con atleti e clienti seguiti direttamente</li>
+    </ul>
+
+    <h2>Destinatari:</h2>
+    <ul>
+        <li>Persone con esperienza in sala pesi</li>
+        <li>Palestre con <strong>bilancieri</strong>, <strong>manubri</strong> e macchine standard</li>
+        <li><strong>Non indicato</strong> per <strong>principianti</strong> assoluti</li>
+    </ul>
+
+    <div class="button-container">
+        <a href="https://paypal.me/giuseppeabatept/30" target="_blank" class="paypal-button">
+            <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal Logo">
+            Acquista Ora – 30€
+        </a>
+    </div>
+
+    <div class="faq">
+        <h3>FAQ – Domande Frequenti</h3>
+        <p><strong>È adatto ai principianti?</strong> No, serve una base di allenamento in palestra.</p>
+        <p><strong>Che attrezzatura serve?</strong> Solo bilancieri, manubri e macchine standard.</p>
+        <p><strong>Quando ricevo il PDF?</strong> Entro 24 ore dal pagamento.</p>
+    </div>
+
+    <p class="note">
+        <strong>N.B.</strong> È necessario aggiungere l'indirizzo email o il numero di telefono in cui si vuole ricevere la programmazione direttamente nelle note del pagamento. Ricordati di scegliere "Amici e parenti".<br><br>
+        Per altri metodi di pagamento contattami su 
+        <a href="https://www.instagram.com/giuseppe_abate_000?igsh=MWJkc2t5NzJwaXdscw==" target="_blank">Instagram</a> o 
+        <a href="https://wa.me/3517781710" target="_blank">WhatsApp</a>!
+    </p>
+</div>
+</body>
+</html>
+
+
+
