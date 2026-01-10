@@ -28,13 +28,8 @@ body {
     pointer-events: none;
 }
 
-.side-logo.left {
-    left: 40px;
-}
-
-.side-logo.right {
-    right: 40px;
-}
+.side-logo.left { left: 40px; }
+.side-logo.right { right: 40px; }
 
 /* CONTENITORE */
 .container {
@@ -54,13 +49,26 @@ h1 {
     font-family: 'Anton', sans-serif;
     font-size: 2.3em;
     color: #ff0000;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 h2 {
     color: #ff0000;
-    margin-top: 25px;
+    margin-top: 30px;
     margin-bottom: 10px;
+}
+
+/* BADGE DURATA */
+.duration-badge {
+    display: inline-block;
+    background-color: #ff0000;
+    color: #fff;
+    font-weight: bold;
+    padding: 8px 18px;
+    border-radius: 999px;
+    font-size: 15px;
+    margin: 10px 0 15px 0;
+    box-shadow: 0 3px 10px rgba(255,0,0,0.6);
 }
 
 /* TESTO */
@@ -143,9 +151,7 @@ li strong {
 
 /* MOBILE */
 @media (max-width: 768px) {
-    .side-logo {
-        display: none;
-    }
+    .side-logo { display: none; }
 }
 
 @media (max-width: 480px) {
@@ -154,9 +160,7 @@ li strong {
         margin: 10px;
     }
 
-    h1 {
-        font-size: 2em;
-    }
+    h1 { font-size: 2em; }
 
     .paypal-button {
         width: 100%;
@@ -183,6 +187,11 @@ li strong {
     </p>
 
     <h2>Caratteristiche</h2>
+
+    <div class="duration-badge">
+        🔥 12 settimane di programmazione
+    </div>
+
     <ul>
         <li><strong>4 sessioni di allenamento a settimana</strong></li>
         <li><strong>Suddivisione muscolare orientata all’ipertrofia</strong></li>
