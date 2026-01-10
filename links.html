@@ -15,20 +15,20 @@ body {
     margin: 0;
 }
 img.logo {
-    max-width: 150px;
+    max-width: 180px;
     margin-bottom: 20px;
 }
 h1 {
     color: #ff0000;
-    font-size: 2em;
+    font-size: 2.2em;
     margin-bottom: 30px;
 }
 a.button {
     display: block;
     width: 90%;
-    max-width: 300px;
-    margin: 10px auto;
-    padding: 15px;
+    max-width: 320px;
+    margin: 15px auto;
+    padding: 18px;
     background: #ffc439;
     color: #111;
     text-decoration: none;
@@ -36,18 +36,60 @@ a.button {
     border-radius: 8px;
     font-size: 18px;
     transition: background 0.3s, transform 0.2s;
+    position: relative;
 }
 a.button:hover {
     background: #ffb347;
     transform: scale(1.03);
 }
+a.button.disabled {
+    background: #555;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Tooltip */
+a.button.disabled:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #222;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 14px;
+    opacity: 1;
+    pointer-events: none;
+    z-index: 10;
+}
+a.button.disabled::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #222;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 14px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+/* Responsive */
 @media (max-width: 480px) {
     a.button {
         font-size: 16px;
-        padding: 12px;
+        padding: 14px;
     }
     img.logo {
-        max-width: 120px;
+        max-width: 150px;
     }
 }
 </style>
@@ -62,7 +104,9 @@ a.button:hover {
 
 <!-- Pulsanti interni -->
 <a class="button" href="index.html" target="_blank">Protocolli Basic</a>
-<a class="button" href="coaching.html" target="_blank">Coaching</a>
+<a class="button disabled" data-tooltip="Coaching online presto disponibile!">Coaching</a>
+
+<!-- In futuro puoi aggiungere altri programmi qui -->
 
 </body>
 </html>
