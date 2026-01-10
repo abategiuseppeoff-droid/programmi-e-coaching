@@ -6,7 +6,6 @@
 <title>Catalogo Programmi</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Anton&display=swap" rel="stylesheet">
 <style>
-/* Corpo principale */
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #000;
@@ -14,30 +13,24 @@ body {
     margin: 0;
     padding: 0;
 }
-.container {
-    max-width: 1200px;
-    margin: 10px auto; /* spazio ridotto sopra e sotto */
-    padding: 15px;
-    text-align: center;
-}
 
 /* Logo sopra il titolo */
 .logo {
-    max-width: 250px; /* logo più grande */
+    max-width: 400px;
     height: auto;
-    margin-bottom: 5px; /* spazio ridotto tra logo e titolo */
+    margin-bottom: 10px;
 }
 
 /* Titolo principale */
 h1 {
     font-family: 'Anton', sans-serif;
     font-size: 3em;
-    margin-bottom: 30px; /* spazio tra titolo e card */
+    margin-bottom: 25px;
 }
 
-/* Riquadro dietro il titolo (stesso colore delle card) */
+/* Riquadro titolo */
 .title-bg {
-    background-color: #222; /* uguale alle card */
+    background-color: #222;
     color: #ff0000;
     padding: 10px 25px;
     border-radius: 12px;
@@ -124,21 +117,15 @@ h1 {
     h1 {
         font-size: 2.2em;
     }
-    .container {
-        padding: 15px;
-        margin: 10px auto;
-    }
     .logo {
-        max-width: 200px;
+        max-width: 250px;
     }
 }
 </style>
 </head>
 <body>
 <div class="container">
-    <!-- Logo sopra il titolo -->
     <img src="Logo.png" alt="Logo" class="logo">
-
     <h1><span class="title-bg">Programmi disponibili</span></h1>
 
     <div class="program-grid">
@@ -159,4 +146,3 @@ h1 {
 </div>
 </body>
 </html>
-
