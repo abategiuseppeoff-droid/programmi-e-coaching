@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Link in Bio</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    padding: 5px 20px; /* spazio minimo sopra il logo */
+    margin: 0;
+}
+img.logo {
+    max-width: 280px; /* logo più grande e leggibile */
+    height: auto;     /* mantiene proporzioni */
+    margin-bottom: 2px; /* distanza minima tra logo e titolo */
+}
+h1 {
+    color: #ff0000;
+    font-size: 2.4em;
+    margin-bottom: 15px; /* distanza minima tra titolo e pulsanti */
+}
+
+/* Pulsanti generali */
+a.button {
+    display: block;
+    width: 90%;
+    max-width: 320px;
+    margin: 15px auto;
+    padding: 18px;
+    background: #ffc439;
+    color: #111;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: background 0.3s, transform 0.2s;
+}
+a.button:hover {
+    background: #ffb347;
+    transform: scale(1.03);
+}
+
+/* Wrapper per pulsante disabilitato */
+.button-wrapper {
+    position: relative;
+    display: block;
+    width: 90%;
+    max-width: 320px;
+    margin: 15px auto;
+}
+
+/* Pulsante disabilitato */
+.button-wrapper .button.disabled {
+    background: #555;
+    color: #ccc;
+    cursor: default;
+    pointer-events: none; /* blocca click ma tooltip funziona */
+}
+
+/* Tooltip per pulsante disabilitato */
+.button-wrapper .button.disabled::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #222;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 14px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+.button-wrapper:hover .button.disabled::after {
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    a.button {
+        font-size: 16px;
+        padding: 14px;
+    }
+    img.logo {
+        max-width: 200px; /* leggibile su mobile */
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Logo -->
+<img src="Logo.png" alt="Logo" class="logo">
+
+<!-- Titolo -->
+<h1>I miei link</h1>
+
+<!-- Pulsante attivo -->
+<a class="button" href="index.html" target="_blank">Protocolli Basic</a>
+
+<!-- Pulsante disabilitato con tooltip -->
+<div class="button-wrapper">
+    <a class="button disabled" data-tooltip="Coaching online presto disponibile!">Coaching</a>
+</div>
+
+<!-- FUTURO: aggiungi altri pulsanti qui -->
+<!--
+<div class="button-wrapper">
+    <a class="button disabled" data-tooltip="Nuovo programma presto disponibile!">Nuovo Programma</a>
+</div>
+-->
+
+</body>
+</html>
