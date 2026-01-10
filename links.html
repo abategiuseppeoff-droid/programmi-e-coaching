@@ -15,14 +15,16 @@ body {
     margin: 0;
 }
 img.logo {
-    max-width: 180px;
+    max-width: 200px;
     margin-bottom: 20px;
 }
 h1 {
     color: #ff0000;
-    font-size: 2.2em;
+    font-size: 2.4em;
     margin-bottom: 30px;
 }
+
+/* Pulsanti generali */
 a.button {
     display: block;
     width: 90%;
@@ -42,7 +44,7 @@ a.button:hover {
     transform: scale(1.03);
 }
 
-/* Wrapper per pulsante disabilitato con tooltip */
+/* Wrapper per pulsante disabilitato */
 .button-wrapper {
     position: relative;
     display: block;
@@ -50,14 +52,16 @@ a.button:hover {
     max-width: 320px;
     margin: 15px auto;
 }
+
+/* Pulsante disabilitato */
 .button-wrapper .button.disabled {
     background: #555;
     color: #ccc;
     cursor: default;
-    pointer-events: none; /* blocca il click */
+    pointer-events: none; /* blocca click ma tooltip funziona */
 }
 
-/* Tooltip */
+/* Tooltip per pulsante disabilitato */
 .button-wrapper .button.disabled::after {
     content: attr(data-tooltip);
     position: absolute;
@@ -98,13 +102,20 @@ a.button:hover {
 <!-- Titolo -->
 <h1>I miei link</h1>
 
-<!-- Pulsanti interni -->
+<!-- Pulsanti attivi -->
 <a class="button" href="index.html" target="_blank">Protocolli Basic</a>
 
-<!-- Pulsante Coaching disabilitato con tooltip -->
+<!-- Pulsante disabilitato con tooltip -->
 <div class="button-wrapper">
     <a class="button disabled" data-tooltip="Coaching online presto disponibile!">Coaching</a>
 </div>
+
+<!-- FUTURO: aggiungi altri pulsanti qui -->
+<!--
+<div class="button-wrapper">
+    <a class="button disabled" data-tooltip="Nuovo programma presto disponibile!">Nuovo Programma</a>
+</div>
+-->
 
 </body>
 </html>
