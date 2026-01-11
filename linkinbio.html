@@ -9,16 +9,17 @@
 
 <style>
 body {
-    margin: 0;
-    padding: 0;
+    font-family: 'Montserrat', sans-serif;
     background: #000;
     color: #fff;
-    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
+/* Contenitore principale */
 .container {
-    max-width: 420px;
-    margin: 0 auto;
+    max-width: 480px;
+    margin: 20px auto;
     padding: 20px;
     text-align: center;
 }
@@ -26,45 +27,43 @@ body {
 /* Logo */
 .logo {
     max-width: 260px;
-    margin: 10px auto 15px auto;
+    margin-bottom: 10px;
 }
 
 /* Titolo */
 h1 {
     font-family: 'Anton', sans-serif;
-    font-size: 1.6em;
-    margin-bottom: 20px;
+    font-size: 2.1em;
+    color: #ff0000;
+    margin-bottom: 25px;
 }
 
-/* Bottoni */
+/* Area link */
 .links {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 15px;
 }
 
+/* Pulsanti */
 .link-btn {
-    background: #111;
-    border: 2px solid #ff0000;
-    color: #ff0000;
-    padding: 16px;
-    border-radius: 14px;
-    font-family: 'Anton', sans-serif;
-    font-size: 1.1em;
-    text-align: center;
     position: relative;
+    background: #222;
+    padding: 16px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
-/* Hover uguale per tutti */
+/* Hover come index */
 .link-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 16px rgba(255, 0, 0, 0.6);
+    transform: scale(1.03);
+    box-shadow: 0 6px 18px rgba(255,0,0,0.6);
 }
 
-/* Disabilitati */
+/* Stato disabilitato */
 .link-btn.disabled {
-    opacity: 0.45;
     cursor: not-allowed;
 }
 
@@ -72,23 +71,32 @@ h1 {
 .link-btn.disabled::after {
     content: attr(data-tooltip);
     position: absolute;
-    bottom: -38px;
+    bottom: -32px;
     left: 50%;
     transform: translateX(-50%);
-    background: #000;
+    background: #ff0000;
     color: #fff;
     padding: 6px 10px;
-    border-radius: 8px;
-    font-size: 0.75em;
-    white-space: nowrap;
-    border: 1px solid #ff0000;
+    border-radius: 6px;
+    font-size: 12px;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.2s;
+    white-space: nowrap;
+    transition: opacity 0.3s;
 }
 
 .link-btn.disabled:hover::after {
     opacity: 1;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.9em;
+    }
+    .logo {
+        max-width: 220px;
+    }
 }
 </style>
 </head>
@@ -103,22 +111,22 @@ h1 {
 
     <div class="links">
 
-        <!-- 1 -->
         <div class="link-btn disabled" data-tooltip="Presto disponibile!">
             Protocolli Gratis
         </div>
 
-        <!-- 2 -->
+        <div class="link-btn disabled" data-tooltip="Presto disponibile!">
+            Protocolli Basic
+        </div>
+
         <div class="link-btn disabled" data-tooltip="Presto disponibile!">
             Protocolli Intermediate
         </div>
 
-        <!-- 3 -->
         <div class="link-btn disabled" data-tooltip="Presto disponibile!">
             Protocolli Advanced
         </div>
 
-        <!-- 4 -->
         <div class="link-btn disabled" data-tooltip="Presto disponibile!">
             Coaching Online
         </div>
