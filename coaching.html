@@ -16,42 +16,52 @@ body {
     color: #fff;
 }
 
-/* Contenitore principale */
+/* Contenitore principale (più compatto) */
 .container {
-    max-width: 700px;
-    margin: 15px auto;
-    padding: 30px;
+    max-width: 580px;
+    margin: 20px auto;
+    padding: 28px 24px;
     background: #222;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.65);
     text-align: center;
 }
 
-/* Titolo */
+/* Titolo principale */
 h1 {
     font-family: 'Anton', sans-serif;
-    font-size: 2.4em;
+    font-size: 2.2em;
     color: #ff0000;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
-/* Testo intro */
+/* Box sotto i titoli */
+.section-box {
+    background: #111;
+    border-radius: 12px;
+    padding: 16px 18px;
+    margin-bottom: 22px;
+    box-shadow: inset 0 0 0 1px #333;
+}
+
+/* Intro */
 .intro {
-    margin-bottom: 25px;
     font-size: 1.05em;
+    margin-bottom: 20px;
 }
 
 /* Titoli sezione */
 h2 {
     color: #ff0000;
-    margin: 25px 0 10px;
+    margin: 0 0 12px 0;
+    font-size: 1.4em;
 }
 
 /* Liste */
 ul {
     list-style: none;
     padding: 0;
-    margin-bottom: 20px;
+    margin: 0;
 }
 ul li {
     margin: 8px 0;
@@ -62,17 +72,16 @@ ul li strong {
 
 /* Bottoni */
 .button-container {
-    margin-top: 30px;
+    margin-top: 26px;
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 14px;
     flex-wrap: wrap;
 }
 
 .button {
-    display: inline-block;
     padding: 14px 22px;
-    border-radius: 8px;
+    border-radius: 10px;
     font-weight: bold;
     text-decoration: none;
     transition: transform 0.2s, box-shadow 0.2s;
@@ -98,11 +107,11 @@ ul li strong {
 /* Mobile */
 @media (max-width: 480px) {
     .container {
-        margin: 10px;
-        padding: 20px;
+        max-width: 92%;
+        padding: 22px 18px;
     }
     h1 {
-        font-size: 2.1em;
+        font-size: 2em;
     }
 }
 </style>
@@ -118,20 +127,24 @@ ul li strong {
         Percorso personalizzato costruito sui tuoi <strong>obiettivi reali</strong>.
     </p>
 
-    <h2>Cosa include</h2>
-    <ul>
-        <li><strong>Programmazione personalizzata</strong></li>
-        <li>Adattamenti settimanali</li>
-        <li>Feedback e supporto diretto</li>
-        <li>Approccio pratico e sostenibile</li>
-    </ul>
+    <div class="section-box">
+        <h2>Cosa include</h2>
+        <ul>
+            <li><strong>Programmazione personalizzata</strong></li>
+            <li>Adattamenti settimanali</li>
+            <li>Feedback diretto e costante</li>
+            <li>Approccio pratico e sostenibile</li>
+        </ul>
+    </div>
 
-    <h2>Per chi è pensato</h2>
-    <ul>
-        <li>Persone con esperienza in palestra</li>
-        <li>Chi vuole risultati concreti</li>
-        <li>Chi segue un percorso con costanza</li>
-    </ul>
+    <div class="section-box">
+        <h2>Per chi è pensato</h2>
+        <ul>
+            <li>Persone con esperienza in palestra</li>
+            <li>Chi vuole risultati concreti</li>
+            <li>Chi segue un percorso con costanza</li>
+        </ul>
+    </div>
 
     <div class="button-container">
         <a href="https://www.instagram.com/giuseppe_abate_000" target="_blank" class="button btn-instagram">
