@@ -7,6 +7,9 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Anton&display=swap" rel="stylesheet">
 
+<!-- Font Awesome CDN corretto -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-k6RqeWeci5ZR/Lv4MR0sA0FfDOMxGcW+e+Y6jMZ+PMf7jx6PZk8Yk3o1S3r5jKowT2o+R58V0Qd0fXjhvI6lRQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 <style>
 body {
     font-family: 'Montserrat', sans-serif;
@@ -62,7 +65,7 @@ p {
     color: #111;
     border-radius: 50%;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 28px; /* aumenta la leggibilità delle icone */
     transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
 }
 
@@ -80,12 +83,13 @@ p {
     h1 {
         font-size: 1.8em;
     }
+    .contact-buttons a {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
 }
 </style>
-
-<!-- Icone font-awesome per Instagram e WhatsApp -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-eO0y5uPz+5yA6N8X0aSsbxPtVbxWZr0qwxCl6Q3Bk+soS+tWsyLxTf0c+om0l76uQqKXNx+ZbFG+MK9KHU9t1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 </head>
 <body>
 <div class="container">
@@ -103,8 +107,8 @@ p {
 
     <!-- Pulsanti contatti -->
     <div class="contact-buttons">
-        <a href="https://www.instagram.com/giuseppe_abate_000" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://wa.me/3517781710" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/giuseppe_abate_000" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/3517781710" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
     </div>
 
 </div>
