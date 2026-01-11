@@ -59,25 +59,25 @@ h1 {
     font-size: 18px;
     transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
     display: inline-block;
+    position: relative;
 }
 
 /* Hover attivo */
 .link-button:hover:not(.disabled) {
     background-color: #ffb347;
     transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(255,0,0,0.6); /* effetto ombra rossa come in index.html */
+    box-shadow: 0 4px 12px rgba(255,0,0,0.6);
 }
 
 /* Pulsante disabilitato */
 .link-button.disabled {
     background-color: #555;
     color: #ccc;
-    cursor: not-allowed;
-    pointer-events: none;
-    position: relative;
+    cursor: default;
+    pointer-events: auto; /* permette hover per tooltip */
 }
 
-/* Tooltip per pulsante disabilitato */
+/* Tooltip uniforme come index.html */
 .link-button.disabled::after {
     content: "Presto disponibile!";
     position: absolute;
@@ -91,10 +91,13 @@ h1 {
     font-size: 12px;
     white-space: nowrap;
     opacity: 0;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
+    box-shadow: 0 4px 12px rgba(255,0,0,0.6);
+    pointer-events: none;
 }
 .link-button.disabled:hover::after {
     opacity: 1;
+    transform: translateX(-50%) translateY(-4px);
 }
 
 /* Mobile */
@@ -123,12 +126,13 @@ h1 {
     <h1>Scopri i miei servizi!</h1>
 
     <!-- Pulsanti -->
-  <div class="link-grid">
-    <a href="protocolli-gratis.html" class="link-button">Protocolli Gratis</a>
-    <a href="index.html" class="link-button">Protocolli Basic</a>
-    <a href="#" class="link-button disabled">Protocolli Intermediate</a>
-    <a href="#" class="link-button disabled">Protocolli Advanced</a>
-    <a href="#" class="link-button disabled">Coaching online</a>
+    <div class="link-grid">
+        <a href="protocolli-gratis.html" class="link-button">Protocolli Gratis</a>
+        <a href="index.html" class="link-button">Protocolli Basic</a>
+        <a href="#" class="link-button disabled">Protocolli Intermediate</a>
+        <a href="#" class="link-button disabled">Protocolli Advanced</a>
+        <a href="#" class="link-button disabled">Coaching online</a>
+    </div>
 </div>
 </body>
 </html>
