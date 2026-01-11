@@ -4,167 +4,157 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Coaching Online</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Anton&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <style>
 body {
-    margin: 0;
-    padding: 0;
     font-family: 'Montserrat', sans-serif;
     background-color: #000;
     color: #fff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    text-align: center;
 }
 
-/* Contenitore principale – ancora più compatto */
-.container {
-    max-width: 540px;
-    margin: 18px auto;
-    padding: 24px 20px;
-    background: #222;
-    border-radius: 14px;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.65);
-    text-align: center;
+/* Logo sopra il titolo */
+.logo {
+    max-width: 250px;
+    height: auto;
+    margin: 10px auto 15px auto;
 }
 
 /* Titolo principale */
 h1 {
     font-family: 'Anton', sans-serif;
-    font-size: 2.2em;
+    font-size: 2.8em;
     color: #ff0000;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
 }
 
-/* Intro */
-.intro {
-    font-size: 1em;
-    margin-bottom: 18px;
-}
-
-/* Riquadri sezione */
-.section-box {
-    background: #111;
+/* Riquadro sotto i titoli principali */
+.title-bg {
+    background-color: #222;
+    color: #ff0000;
+    padding: 10px 20px;
     border-radius: 12px;
-    padding: 14px 14px;
-    margin: 0 auto 18px;
-    max-width: 480px; /* stringe visivamente i lati */
-    box-shadow: inset 0 0 0 1px #333;
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    margin-bottom: 25px;
 }
 
-/* Titoli sezione – STESSO FONT DEL TITOLO */
-.section-box h2 {
+/* Riquadri secondari */
+.section-bg {
+    background-color: #222;
+    color: #ff0000;
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+/* Titoli delle sezioni */
+.section-bg h2 {
+    margin: 0 0 10px 0;
     font-family: 'Anton', sans-serif;
-    color: #ff0000;
-    font-size: 1.35em;
-    margin: 0 0 10px;
-    letter-spacing: 0.5px;
+    font-size: 1.6em;
 }
 
-/* Liste compatte */
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-ul li {
-    margin: 6px 0;
-    font-size: 0.95em;
-}
-ul li strong {
-    color: #ff0000;
+/* Testo normale dentro le sezioni */
+.section-bg p {
+    color: #ddd;
+    font-size: 1em;
+    margin: 5px 0 0 0;
 }
 
-/* Bottoni */
+/* Container icone */
 .button-container {
-    margin-top: 22px;
-    display: flex;
+    margin-top: 30px;
+}
+
+/* Icone cliccabili */
+.icon-btn {
+    display: inline-flex;
+    align-items: center;
     justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;
-}
-
-.button {
-    padding: 12px 20px;
-    border-radius: 10px;
-    font-weight: bold;
-    font-size: 0.95em;
-    text-decoration: none;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(255,0,0,0.6);
-}
-
-/* Instagram */
-.btn-instagram {
-    background: #ff0000;
+    margin: 0 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
     color: #fff;
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-size: 1.8em;
 }
 
-/* WhatsApp */
-.btn-whatsapp {
-    background: #25d366;
-    color: #111;
+.icon-btn.instagram {
+    background: #E1306C;
+}
+
+.icon-btn.whatsapp {
+    background: #25D366;
+}
+
+.icon-btn:hover {
+    transform: scale(1.15);
+    box-shadow: 0 4px 12px rgba(255,0,0,0.6);
 }
 
 /* Mobile */
 @media (max-width: 480px) {
-    .container {
-        max-width: 92%;
-        padding: 20px 16px;
+    .logo {
+        max-width: 180px;
     }
-    .section-box {
-        max-width: 100%;
-        padding: 14px;
+    .section-bg {
+        max-width: 90%;
+        padding: 12px 15px;
     }
     h1 {
         font-size: 2em;
     }
+    .icon-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5em;
+        margin: 0 8px;
+    }
 }
 </style>
 </head>
-
 <body>
 
-<div class="container">
+<img src="Logo.png" alt="Logo" class="logo">
 
-    <h1>Coaching Online</h1>
+<h1><span class="title-bg">Coaching Online</span></h1>
 
-    <p class="intro">
-        Percorso personalizzato costruito sui tuoi <strong>obiettivi reali</strong>.
-    </p>
+<div class="section-bg">
+    <h2>Cosa include</h2>
+    <p>Programmazione personalizzata</p>
+    <p>Supporto costante durante tutto il percorso</p>
+    <p>Consigli pratici su alimentazione e allenamento</p>
+</div>
 
-    <div class="section-box">
-        <h2>Cosa include</h2>
-        <ul>
-            <li><strong>Programmazione personalizzata</strong></li>
-            <li>Adattamenti settimanali</li>
-            <li>Feedback diretto e costante</li>
-            <li>Approccio pratico e sostenibile</li>
-        </ul>
-    </div>
+<div class="section-bg">
+    <h2>Per chi è pensato</h2>
+    <p>Chi vuole risultati reali e personalizzati</p>
+    <p>Chi non vuole schede copia-incolla</p>
+</div>
 
-    <div class="section-box">
-        <h2>Per chi è pensato</h2>
-        <ul>
-            <li>Persone con esperienza in palestra</li>
-            <li>Chi vuole risultati concreti</li>
-            <li>Chi segue un percorso con costanza</li>
-        </ul>
-    </div>
+<div class="section-bg">
+    <h2>Come funziona</h2>
+    <p>Valutazione iniziale delle esigenze</p>
+    <p>Programmazione e check settimanale</p>
+    <p>Feedback continuo e aggiornamento del percorso</p>
+</div>
 
-    <div class="button-container">
-        <a href="https://www.instagram.com/giuseppe_abate_000" target="_blank" class="button btn-instagram">
-            Contattami su Instagram
-        </a>
-
-        <a href="https://wa.me/3517781710" target="_blank" class="button btn-whatsapp">
-            Scrivimi su WhatsApp
-        </a>
-    </div>
-
+<div class="button-container">
+    <a href="https://www.instagram.com/giuseppe_abate_000" target="_blank" class="icon-btn instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://wa.me/3517781710" target="_blank" class="icon-btn whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 </div>
 
 </body>
