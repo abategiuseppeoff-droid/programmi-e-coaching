@@ -16,11 +16,11 @@ body {
     color: #fff;
 }
 
-/* Contenitore principale (più compatto) */
+/* Contenitore principale – ancora più compatto */
 .container {
-    max-width: 580px;
-    margin: 20px auto;
-    padding: 28px 24px;
+    max-width: 540px;
+    margin: 18px auto;
+    padding: 24px 20px;
     background: #222;
     border-radius: 14px;
     box-shadow: 0 4px 18px rgba(0,0,0,0.65);
@@ -32,39 +32,43 @@ h1 {
     font-family: 'Anton', sans-serif;
     font-size: 2.2em;
     color: #ff0000;
-    margin-bottom: 12px;
-}
-
-/* Box sotto i titoli */
-.section-box {
-    background: #111;
-    border-radius: 12px;
-    padding: 16px 18px;
-    margin-bottom: 22px;
-    box-shadow: inset 0 0 0 1px #333;
+    margin-bottom: 10px;
 }
 
 /* Intro */
 .intro {
-    font-size: 1.05em;
-    margin-bottom: 20px;
+    font-size: 1em;
+    margin-bottom: 18px;
 }
 
-/* Titoli sezione */
-h2 {
+/* Riquadri sezione */
+.section-box {
+    background: #111;
+    border-radius: 12px;
+    padding: 14px 14px;
+    margin: 0 auto 18px;
+    max-width: 480px; /* stringe visivamente i lati */
+    box-shadow: inset 0 0 0 1px #333;
+}
+
+/* Titoli sezione – STESSO FONT DEL TITOLO */
+.section-box h2 {
+    font-family: 'Anton', sans-serif;
     color: #ff0000;
-    margin: 0 0 12px 0;
-    font-size: 1.4em;
+    font-size: 1.35em;
+    margin: 0 0 10px;
+    letter-spacing: 0.5px;
 }
 
-/* Liste */
+/* Liste compatte */
 ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 ul li {
-    margin: 8px 0;
+    margin: 6px 0;
+    font-size: 0.95em;
 }
 ul li strong {
     color: #ff0000;
@@ -72,17 +76,18 @@ ul li strong {
 
 /* Bottoni */
 .button-container {
-    margin-top: 26px;
+    margin-top: 22px;
     display: flex;
     justify-content: center;
-    gap: 14px;
+    gap: 12px;
     flex-wrap: wrap;
 }
 
 .button {
-    padding: 14px 22px;
+    padding: 12px 20px;
     border-radius: 10px;
     font-weight: bold;
+    font-size: 0.95em;
     text-decoration: none;
     transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -108,7 +113,11 @@ ul li strong {
 @media (max-width: 480px) {
     .container {
         max-width: 92%;
-        padding: 22px 18px;
+        padding: 20px 16px;
+    }
+    .section-box {
+        max-width: 100%;
+        padding: 14px;
     }
     h1 {
         font-size: 2em;
